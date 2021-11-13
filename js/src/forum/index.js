@@ -32,7 +32,7 @@ app.initializers.add('justoverclock/thread-read-time', () => {
 
     const getScrollValue = () => {
       let distance = -section.getBoundingClientRect().top;
-      let progressWidth = (distance / (section.getBoundingClientRect().height - document.documentElement.clientHeight) + 0.36) * 100;
+      let progressWidth = (distance / (section.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
       let value = Math.floor(progressWidth);
 
       progressBar.style.width = value + '%';
