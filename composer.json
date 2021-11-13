@@ -2,7 +2,8 @@
     "name": "justoverclock/thread-read-time",
     "description": "Add a read time progress bar to Flarum",
     "keywords": [
-        "flarum"
+        "read time",
+        "progress bar"
     ],
     "type": "flarum-extension",
     "license": "MIT",
@@ -19,14 +20,15 @@
             "role": "Developer"
         }
     ],
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://www.paypal.com/donate?hosted_button_id=25WSH565TJCLE"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Justoverclock\\ThreadReadTime\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Justoverclock\\ThreadReadTime\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -34,25 +36,10 @@
             "title": "Read Time",
             "category": "",
             "icon": {
-                "name": "",
-                "backgroundColor": "",
-                "color": ""
+                "name": "fas fa-book-reader",
+                "backgroundColor": "purple",
+                "color": "white"
             }
         }
-    },
-    "scripts": {
-        "test": [
-            "@test:unit",
-            "@test:integration"
-        ],
-        "test:unit": "phpunit -c tests/phpunit.unit.xml",
-        "test:integration": "phpunit -c tests/phpunit.integration.xml",
-        "test:setup": "@php tests/integration/setup.php"
-    },
-    "scripts-descriptions": {
-        "test": "Runs all tests.",
-        "test:unit": "Runs all unit tests.",
-        "test:integration": "Runs all integration tests.",
-        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
     }
 }
