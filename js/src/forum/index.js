@@ -12,7 +12,6 @@ import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
 import PostStream from 'flarum/forum/components/PostStream';
 import PostStreamScrubber from 'flarum/forum/components/PostStreamScrubber';
-import ScrollListener from 'flarum/common/utils/ScrollListener';
 
 app.initializers.add('justoverclock/thread-read-time', () => {
   extend(PostStreamScrubber.prototype, 'view', function (vdom) {
