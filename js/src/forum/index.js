@@ -12,6 +12,7 @@ import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
 import PostStream from 'flarum/forum/components/PostStream';
 import PostStreamScrubber from 'flarum/forum/components/PostStreamScrubber';
+import ScrollListener from 'flarum/common/utils/ScrollListener';
 
 app.initializers.add('justoverclock/thread-read-time', () => {
   extend(PostStreamScrubber.prototype, 'view', function (vdom) {
@@ -32,8 +33,8 @@ app.initializers.add('justoverclock/thread-read-time', () => {
 
     const getScrollValue = () => {
       let distance = -section.getBoundingClientRect().top;
-      let progressWidth = (distance / (section.getBoundingClientRect().height - document.documentElement.clientHeight)+0.36) * 100;
-      let value = Math.floor(progressWidth);
+      let progressWidth = (distance / (section.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
+      let value = Math.min(Math.max(parseInt(progressWidth), 0), 100);
 
       progressBar.style.width = value + '%';
       readTime.innerText =
