@@ -4,6 +4,9 @@
 
 A [Flarum](http://flarum.org) extension. Add a read time progress bar to Flarum
 
+![Immagine 2021-11-15 003213](https://user-images.githubusercontent.com/79002016/141703063-7521ecc8-5444-4292-8e3c-2fa509e31a24.png)
+
+
 ## Installation
 
 Install with composer:
